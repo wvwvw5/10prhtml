@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .car-list .card {
+            flex: 1 1 30%;
+            margin: 10px;
+        }
+        .car-form {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">Car Management</h1>
+        
+        <div class="card mb-3 form-container">
+            <div class="card-body">
+                <h5 class="card-title text-center">Add New Car</h5>
+                <form id="carForm" class="car-form">
+                    <div class="form-group">
+                        <label for="make">Make</label>
+                        <input type="text" class="form-control" id="make" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" class="form-control" id="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="number" class="form-control" id="year" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Add Car</button>
+                </form>
+            </div>
+        </div>
+
+        <h3 class="my-4 text-center">Car List</h3>
+        <div id="carList" class="car-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
